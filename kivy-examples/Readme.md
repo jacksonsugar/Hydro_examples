@@ -7,7 +7,7 @@ $ sudo pip install pygame cython
 
 %%%
 Quick install
-sudo pip install git+ https://github.com/kivy/kivy.git@stable-1.10
+sudo pip install git+https://github.com/kivy/kivy.git@stable-1.10
 
 
 %%%%
