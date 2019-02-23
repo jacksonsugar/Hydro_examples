@@ -441,7 +441,11 @@ if __name__ == '__main__':
     from kivy.uix.button import Button
     from kivy.uix.boxlayout import BoxLayout
     from kivy.uix.label import Label
+    import subprocess
+    import sys
 
+    def quit_slow():
+        subprocess.Popen([sys.executable, "killall.py"])
     acc = Accordion()
     for x in range(3):
         item = AccordionItem(title='Some numbers over here bish... #%d' % x)
@@ -475,8 +479,9 @@ if __name__ == '__main__':
         acc.min_space = value
 
     def callback(*l):
-        #print("Help Me!")
-        os.system('ifconfig')
+        print("Help Me!")
+	os.system("ifconfig")
+        quit_slow()
     btn3 = Button(text='Run ifconfig')
     btn3.bind(on_release=callback)
 

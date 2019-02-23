@@ -2,6 +2,11 @@ from kivy.app import App
 from kivy.uix.button import Button
 from kivy.uix.label import Label
 from kivy.uix.boxlayout import BoxLayout
+import subprocess
+import sys
+
+def quit_slow():
+    subprocess.Popen([sys.executable, "killall.py"])
 
 class TestApp(App):
     def build(self):
@@ -19,5 +24,6 @@ class TestApp(App):
     def callback(self, event):
         print("Help Me!!!!")  # test
         self.label.text = "Help Me!!!"
+	quit_slow()
 
 TestApp().run()
