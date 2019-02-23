@@ -5,7 +5,15 @@ $ sudo apt-get install libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-t
 
 $ sudo pip install pygame cython
 
+%%%
+Quick install
+sudo pip install git+ https://github.com/kivy/kivy.git@stable-1.10
+
+
+%%%%
+Build from source
 ~/Documents/ $ git clone https://github.com/kivy/kivy
+
 ~/Documents/ $ cd kivy
 
 ~/Documents/kivy/ $ make
